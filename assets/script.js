@@ -1,6 +1,7 @@
 totalClick = 0;
 var touched = [];
 var touchedSquares = [];
+var score = 0;
 
 // ---- randomizer
 var board = {
@@ -45,7 +46,14 @@ var setBackground = function(index) {
 	
 } // end setBackground
 
+var flipOver = function() {
+		setTimeout(function() {
+		//console.log(touchedSquares[touchedSquares.length - 1], "touchedSquares[touchedSquares.length - 1]")
+		return	(document.getElementById(touchedSquares[touchedSquares.length - 1]).style.backgroundImage = "none",
+				document.getElementById(touchedSquares[touchedSquares.length - 2]).style.backgroundImage = "none")
+		},1000)
 
+} // end flipOver	
 
 
 
@@ -69,6 +77,7 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 	square.style.width = "170px"
 	square.style.float = "left"
 	square.style.paddingBottom = "170px"
+	square.style.backgroundRepeat="no-repeat"
 
 	// set background image
 //	if (i === 1) {
@@ -90,15 +99,18 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 		//console.log(typeof(thisId))
 
 // function removes image from last 2 items in the order array
-var flipOver = function() {
-		setTimeout(function() {
-		//console.log(touchedSquares[touchedSquares.length - 1], "touchedSquares[touchedSquares.length - 1]")
-		return	(document.getElementById(touchedSquares[touchedSquares.length - 1]).style.backgroundImage = "none",
-				document.getElementById(touchedSquares[touchedSquares.length - 2]).style.backgroundImage = "none")
-		},1000)
+	
+		var scoreCount = function() {
+			 score += 100
+			// var temp = document.createElement("h2")
+			// temp.className = "scoreCounter";
+			// temp.appendChild("score")
 
-} // end flipOver		
-
+			var willReturn = "Score \"" + score + "\""
+			console.log(willReturn)
+		//	return willReturn
+			return willReturn
+		}
 // shows picture if totalClick <= 2
 		if (totalClick < 2) {
 		this.style.backgroundImage = setBackground(thisId) 
@@ -114,22 +126,18 @@ var flipOver = function() {
 				totalClick = 0 // resets total click 
 
 			} else {
+				
+			//	document.querySelector(".centerMe").appendChild(square)
+			//	score();
+				document.querySelector(".scoreCounter").innerHTML = scoreCount()
+				//var tempInfo = document.getElementById("#scoreCount").innerHTML
+				//console.log (tempInfo, "#tempInfo")
+				//document.getElementById("#scoreCount").innerHTML()
+			
 				totalClick = 0
 			}	
 		}
 
-
-
-// 		if (totalClick < 5) {
-// //			this.style.backgroundColor = "red"
-// 			last = "red"
-// 				if (this.style.backgroundColor === last) {
-// 				console.log(1)
-// 		}
-// 			totalClick += 1
-// 	//		console.log(this)
-
-// 		}
 	} ) // end event listener
 }
 
