@@ -79,6 +79,7 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 	square.style.paddingBottom = "150px"
 	square.style.backgroundRepeat="no-repeat"
 
+
 	// set background image
 //	if (i === 1) {
 	//	square.style.backgroundImage=setBackground(i)
@@ -108,6 +109,11 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 
 			var willReturn = "Score  " + score
 			console.log(willReturn)
+			if (scoreCount = 100) {
+				document.querySelector("h1").innerHTML = "YOU WIN"
+				document.querySelector("h1").style.background = "crimson"
+				document.querySelector("h1").style.border = "thick groove black"
+			}
 		//	return willReturn
 			return willReturn
 		}
@@ -139,6 +145,9 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 		}
 
 	} ) // end event listener
+	if (score === 200) {
+		console.log ("congrats!")
+	}
 }
 
 
