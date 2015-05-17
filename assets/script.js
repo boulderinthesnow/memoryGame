@@ -84,10 +84,10 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 	//	square.style.backgroundImage=setBackground(i)
 
 //	} else {
-	 	square.style.backgroundColor = "green"
+	// 	square.style.backgroundColor = "green"
 	// } 	// /set background mage
 
-	square.style.border = "1px solid white"
+	square.style.border = "1px solid #F5F5DC"
 	document.querySelector(".centerMe").appendChild(square)
 
 // when I click a square, the image in order at that square's ID appears	
