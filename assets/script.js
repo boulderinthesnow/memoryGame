@@ -74,9 +74,9 @@ last = "black"
 for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 	var square = document.createElement('div')
 	square.setAttribute("id", i);
-	square.style.width = "170px"
+	square.style.width = "150px"
 	square.style.float = "left"
-	square.style.paddingBottom = "170px"
+	square.style.paddingBottom = "150px"
 	square.style.backgroundRepeat="no-repeat"
 
 	// set background image
@@ -106,7 +106,7 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 			// temp.className = "scoreCounter";
 			// temp.appendChild("score")
 
-			var willReturn = "Score \"" + score + "\""
+			var willReturn = "Score  " + score
 			console.log(willReturn)
 		//	return willReturn
 			return willReturn
