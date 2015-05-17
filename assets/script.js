@@ -109,7 +109,7 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 
 			var willReturn = "Score  " + score
 			console.log(willReturn)
-			if (scoreCount = 100) {
+			if (scoreCount = 800) {
 				document.querySelector("h1").innerHTML = "YOU WIN"
 				document.querySelector("h1").style.background = "crimson"
 				document.querySelector("h1").style.border = "thick groove black"
