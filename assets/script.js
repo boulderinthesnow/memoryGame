@@ -51,7 +51,7 @@ var flipOver = function() {
 		//console.log(touchedSquares[touchedSquares.length - 1], "touchedSquares[touchedSquares.length - 1]")
 		return	(document.getElementById(touchedSquares[touchedSquares.length - 1]).style.backgroundImage = "none",
 				document.getElementById(touchedSquares[touchedSquares.length - 2]).style.backgroundImage = "none")
-		},1000)
+		},500)
 
 } // end flipOver	
 
@@ -109,7 +109,7 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 
 			var willReturn = "Score  " + score
 			console.log(willReturn)
-			if (scoreCount = 800) {
+			if (score === 800) {
 				document.querySelector("h1").innerHTML = "YOU WIN"
 				document.querySelector("h1").style.background = "crimson"
 				document.querySelector("h1").style.border = "thick groove black"
