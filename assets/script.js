@@ -48,7 +48,10 @@ var setBackground = function(index) {
 
 var flipOver = function() {
 		setTimeout(function() {
+		
 		//console.log(touchedSquares[touchedSquares.length - 1], "touchedSquares[touchedSquares.length - 1]")
+		
+
 		return	(document.getElementById(touchedSquares[touchedSquares.length - 1]).style.backgroundImage = "none",
 				document.getElementById(touchedSquares[touchedSquares.length - 2]).style.backgroundImage = "none")
 		},500)
@@ -78,6 +81,7 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 	square.style.float = "left"
 	square.style.paddingBottom = "150px"
 	square.style.backgroundRepeat="no-repeat"
+	square.className = square.className + " hvr-pop hvr-fade "
 
 
 	// set background image
@@ -88,7 +92,7 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 	// 	square.style.backgroundColor = "green"
 	// } 	// /set background mage
 
-	square.style.border = "1px solid #F5F5DC"
+	square.style.border = "3px solid #F5F5DC"
 	document.querySelector(".centerMe").appendChild(square)
 
 // when I click a square, the image in order at that square's ID appears	
