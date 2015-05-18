@@ -17,8 +17,12 @@ body {
 }
 
 .centerMe {
-	margin-left: 2%;
+	margin-left: 27%;
+	/*margin-right: 20%;*/
 	background-color: "red";
+	text-align: center;
+	width: 625px;
+
 }
 
 /*h1 {
