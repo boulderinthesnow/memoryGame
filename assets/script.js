@@ -50,10 +50,11 @@ var flipOver = function() {
 		setTimeout(function() {
 		
 		//console.log(touchedSquares[touchedSquares.length - 1], "touchedSquares[touchedSquares.length - 1]")
-		
+		var returnMe = (document.getElementById(touchedSquares[touchedSquares.length - 1]).style.backgroundImage = "none",
+				document.getElementById(touchedSquares[touchedSquares.length - 2]).style.backgroundImage = "none"
+				)
 
-		return	(document.getElementById(touchedSquares[touchedSquares.length - 1]).style.backgroundImage = "none",
-				document.getElementById(touchedSquares[touchedSquares.length - 2]).style.backgroundImage = "none")
+		return returnMe
 		},500)
 
 } // end flipOver	
@@ -115,8 +116,12 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 			console.log(willReturn)
 			if (score === 800) {
 				document.querySelector("h1").innerHTML = "YOU WIN"
-				document.querySelector("h1").style.background = "crimson"
-				document.querySelector("h1").style.border = "thick groove black"
+				document.querySelector("h1").style.background = "#d12098"
+				document.querySelector("h1").style.border = "75px groove #20d15a"
+				document.querySelector("h1").className = document.querySelector("h1").className + " hvr-back-pulse"
+				scroll(0,0)
+	//			document.querySelector("h1").style.background = "crimson"
+				//document.querySelector(".scoreCounter").style.background = 
 			}
 		//	return willReturn
 			return willReturn
@@ -139,7 +144,14 @@ for (i = 0 ; i < 16 ; i++) { // create the 16 squares
 				
 			//	document.querySelector(".centerMe").appendChild(square)
 			//	score();
+			console.log(touchedSquares[touchedSquares.length -1] , "touchedSquares[touchedSquares.length -1]")
+			//if (touchedSquares[touchedSquares.length -1] !== touchedSquares[touchedSquares.length -1]) {
 				document.querySelector(".scoreCounter").innerHTML = scoreCount()
+			//}	
+				// if (score === 100) {
+				// 	var scoreOnPage = document.querySelector(".scoreCounter")
+				// 	scoreOnPage.className = scoreOnPage.className + " hvr-pulse-shrink"
+				// }
 				//var tempInfo = document.getElementById("#scoreCount").innerHTML
 				//console.log (tempInfo, "#tempInfo")
 				//document.getElementById("#scoreCount").innerHTML()
